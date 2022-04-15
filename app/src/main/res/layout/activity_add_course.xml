@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".AddCourse">
+
+    <Button
+        android:id="@+id/submit_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="120dp"
+        android:background="#5763B5"
+        android:text="Submit"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancel_btn2"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/cancel_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="40dp"
+        android:background="#5763B5"
+        android:text="Cancel"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/course_desc"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/course_id_edit"
+        android:layout_width="294dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Course Id"
+        android:inputType="textMultiLine"
+        android:textColor="@color/black"
+        android:textColorHint="#A3A3A3"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/assign_descr_ask2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/course_desc"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="128dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Assignment description"
+        android:inputType="textMultiLine"
+        android:textColor="@color/black"
+        android:textColorHint="#A3A3A3"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/submit_btn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/assign_descr_ask2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Description"
+        android:textColor="#5763B5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/course_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/title_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="#5763B5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/course_title_edit3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_assign_title2"
+        app:layout_constraintVertical_bias="0.981" />
+
+    <TextView
+        android:id="@+id/course_id_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Course ID"
+        android:textColor="#5763B5"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/course_id_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/course_title_edit3"
+        android:layout_width="294dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Title"
+        android:inputType="textMultiLine"
+        android:textColor="@color/black"
+        android:textColorHint="#A3A3A3"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/course_id_ask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/add_assign_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Add Course"
+        android:textColor="#5763B5"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
