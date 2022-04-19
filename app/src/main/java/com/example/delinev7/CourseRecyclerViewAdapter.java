@@ -1,5 +1,7 @@
 package com.example.delinev7;
 
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,12 +22,18 @@ public class CourseRecyclerViewAdapter extends RecyclerView.Adapter<CourseRecycl
         TextView coursename;
         TextView courseid;
         TextView coursedescr;
+        int position;
+        private CourseRecyclerViewAdapter adapter;
 
         public CourseViewHolder(final View view) {
             super(view);
             coursename=view.findViewById(R.id.course_name);
             courseid=view.findViewById(R.id.course_id_txt);
-            coursedescr=view.findViewById(R.id.course_desc_info);
+            //coursedescr=view.findViewById(R.id.course_desc_info);
+            view.findViewById(R.id.info_btn).setOnClickListener(v -> {
+                //Log.d("democourse", "onclick button was clicked at" + position + "course: " + coursename + " "+ courseid );
+                openActivity2(view);
+            });
         }
     }
 
@@ -35,7 +43,7 @@ public class CourseRecyclerViewAdapter extends RecyclerView.Adapter<CourseRecycl
         View itemView= LayoutInflater.from(parent.getContext()).inflate(R.layout.card, parent,false);
         return new CourseViewHolder(itemView);
     }
-
+ 
     @Override
     public void onBindViewHolder(@NonNull CourseRecyclerViewAdapter.CourseViewHolder holder, int position) {
         String ctitle= courseList.get(position).getCoursename();
@@ -50,7 +58,10 @@ public class CourseRecyclerViewAdapter extends RecyclerView.Adapter<CourseRecycl
     public int getItemCount() {
         return courseList.size();
     }
+    public void openActivity2(View view){
+        Intent ciintent= new Intent(view.getContext(),CourseInfo.class);
+        view.getContext().startActivity(ciintent);
 
-
+    }
 
 }

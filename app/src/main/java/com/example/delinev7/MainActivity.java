@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Layout;
@@ -16,32 +17,31 @@ import android.widget.Button;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity{
-
+    //array tthat stores assignment items
     ArrayList<Asstitems> asstitems;
     ArrayList<Courseitems> courseitems;
+    //Recycle views the stores assignments
     private RecyclerView recyclerView;
+    //Recycle views the stores course data
     private RecyclerView recyclerViewC;
-    Layout layoutA;
-    int counter=0;
 
 
+    //Add Data Button
     Button addc;
-    Button ainfo;
-    Button cinfo;
     Button adda;
 
 
+
+
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Intent mintent = getIntent();
-
+        //OnClick buttons to input activities
         adda=findViewById(R.id.addA);
         addc=findViewById(R.id.addC);
-
-
-
 
 
 
@@ -60,8 +60,6 @@ public class MainActivity extends AppCompatActivity{
 
 
 
-
-
         recyclerView= findViewById(R.id.asst_recview);
         asstitems=new ArrayList<>();
         recyclerViewC= findViewById(R.id.course_recview);
@@ -74,7 +72,7 @@ public class MainActivity extends AppCompatActivity{
 
         //String st = getIntent().getExtras().getString("value");
 
-
+        //Calling methods
         setAssignInfo();
         setAssignAdapter();
         setCourseInfo();
@@ -84,10 +82,9 @@ public class MainActivity extends AppCompatActivity{
 
 
 
-
-
     }
     private void setAssignAdapter() {
+        //set tiles for assignments
         RecyclerViewAdapter adapter =new RecyclerViewAdapter(asstitems);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
         recyclerView.setAdapter(adapter);
@@ -97,27 +94,31 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private void setAssignInfo() {
+        //add assignment info
         asstitems.add(new Asstitems("bob1","date"));
-        asstitems.add(new Asstitems("bob2","help"));
+        asstitems.add(new Asstitems("bob2","date"));
         asstitems.add(new Asstitems("bob3","01/22/23"));
+        asstitems.add(new Asstitems("bob4","date"));
+        asstitems.add(new Asstitems("bob4","01/22/23"));
 
 
 
     }
     private void setCourseAdapter() {
+        //set cards for course
         CourseRecyclerViewAdapter adapter =new CourseRecyclerViewAdapter(courseitems);
         recyclerViewC.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewC.setAdapter(adapter);
 
-
-
     }
 
     private void setCourseInfo() {
+        //add course item
         courseitems.add(new Courseitems("Math","Math-123"));
         courseitems.add(new Courseitems("Math2","Math-123"));
         courseitems.add(new Courseitems("Math3","Math-123"));
     }
+    //intent methods to open Add Assignment Activity and Course Activity
 
     private void openAddAssign() {
         Intent aintent= new Intent(this, AddAssign.class);
@@ -129,15 +130,6 @@ public class MainActivity extends AppCompatActivity{
         startActivity(cintent);
 
     }
-    private void openAssignInfo() {
-        Intent aiintent= new Intent(this, AssignInfo.class);
-        startActivity(aiintent);
 
-    }
-    private void openCourseInfo() {
-        Intent ciintent= new Intent(this, CourseInfo.class);
-        startActivity(ciintent);
-
-    }
 
 }

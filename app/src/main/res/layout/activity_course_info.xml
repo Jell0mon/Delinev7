@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8AA8FF"
+    android:background="#161F44"
     tools:context=".CourseInfo">
 
     <TextView
@@ -128,7 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:background="#5763B5"
+                android:background="#161F44"
                 android:paddingTop="0dp"
                 android:paddingBottom="0dp"
                 android:text="Delete"

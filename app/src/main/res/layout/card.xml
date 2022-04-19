@@ -21,10 +21,17 @@
             app:cardCornerRadius="15dp"
             app:cardElevation="10dp">
 
+            <Button
+                android:id="@+id/info_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00FFFFFF"
+                android:textColor="#161F44" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#8AA8FF"
+                android:background="#FFFFFF"
                 android:padding="10dp">
 
                 <LinearLayout
@@ -41,7 +48,7 @@
                         android:paddingStart="25dp"
                         android:text="Name"
                         android:textAlignment="textStart"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#161F44"
                         android:textFontWeight="1000"
                         android:textSize="30dp" />
 
@@ -52,7 +59,7 @@
                         android:paddingStart="25dp"
                         android:text="Course"
                         android:textAlignment="textStart"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#161F44"
                         android:textSize="20sp" />
 
                 </LinearLayout>

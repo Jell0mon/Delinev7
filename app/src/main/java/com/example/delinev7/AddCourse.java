@@ -22,12 +22,12 @@ public class AddCourse extends AppCompatActivity {
 
 
         findViewById(R.id.submit_btn2).setOnClickListener(v -> {
-                backhome();
+                finish();
 
         });
         findViewById(R.id.cancel_btn2).setOnClickListener(v -> {
 
-            backhome();
+            finish();
 
 
         });

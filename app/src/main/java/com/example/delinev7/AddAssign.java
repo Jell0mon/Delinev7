@@ -10,6 +10,9 @@ import android.widget.TextView;
 public class AddAssign extends MainActivity {
     LinearLayout layoutA;
     EditText titletext;
+    EditText assigntype;
+    EditText assigndesc;
+
     String newtitle;
 
 
@@ -29,13 +32,13 @@ public class AddAssign extends MainActivity {
             @Override
             public void onClick(View v) {
 
-                backhome();
+                finish();
             }
 
         });
         findViewById(R.id.cancel_btn).setOnClickListener(v -> {
 
-            backhome();
+            finish();
 
 
         });
