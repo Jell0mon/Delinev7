@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFB482"
-    tools:context=".AssignInfo">
+    android:backgroundTint="#FFB482"
+    tools:context=".AverageTime">
 
     <TextView
         android:id="@+id/assign_trans_title"
@@ -18,7 +19,6 @@
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.21"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,7 +26,6 @@
         android:id="@+id/cardView"
         android:layout_width="419dp"
         android:layout_height="618dp"
-        android:layout_marginTop="40dp"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,63 +62,23 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/type_assign_info"
-                android:layout_width="match_parent"
+                android:id="@+id/how_long_text"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Type: "
-                android:textColor="#000000"
+                android:text="How long did this assignment take?"
+                android:textColor="#030303"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/start_date_title"
-                android:layout_width="match_parent"
+            <EditText
+                android:id="@+id/time_edit"
+                android:layout_width="349dp"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:text="Should Start:"
+                android:ems="10"
+                android:hint="Time in minutes"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
                 android:textColor="#000000"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/start_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:text="Start"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/due_date_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:text="Due Date"
-                android:textColor="#000000"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/due_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:text="Due Date"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/desc_title_a"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:text="Description"
-                android:textColor="#000000"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/desc_assign"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:text="AAAA BBB CCCC DDDD EEE FFFF GGGG HHHH III."
-                android:textColor="#8B8B8B" />
+                android:textColorHint="#BEBEBE" />
 
             <LinearLayout
                 android:layout_width="371dp"
@@ -134,16 +93,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="50dp"
                     android:background="#161F44"
-                    android:text="Completed?"
-                    android:textAlignment="center" />
+                    android:minHeight="48dp"
+                    android:text="Complete"
+                    android:textAlignment="center"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
                 <Button
                     android:id="@+id/cancel_btn3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#161F44"
-                    android:text="Delete"
-                    android:textAlignment="center" />
+                    android:minHeight="48dp"
+                    android:text="Cancel"
+                    android:textAlignment="center"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
             </LinearLayout>
 
         </LinearLayout>

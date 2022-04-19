@@ -4,38 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:layout_gravity="right"
+    android:background="#B11A1A"
+    android:gravity="right"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E1E2E2"
+        android:background="#FAF8F3"
         android:orientation="vertical">
 
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/greeting"
             android:layout_width="wrap_content"
-            android:layout_height="78dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="20dp"
 
-            <TextView
-                android:id="@+id/greeting"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_margin="10dp"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="30dp"
+            android:fontFamily="@font/montserrat_alternates_semibold"
+            android:paddingTop="15dp"
+            android:paddingBottom="5dp"
+            android:text=" Hello, Student"
+            android:textColor="#D29681"
+            android:textSize="24sp"
+            android:textStyle="normal" />
 
-                android:fontFamily="@font/montserrat_alternates_semibold"
-                android:paddingTop="25dp"
-                android:paddingBottom="5dp"
-                android:text=" Hello, Student"
-                android:textColor="#003049"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="Here's your schedule"
+            android:textColor="#8B8B8B" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card2"
@@ -43,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="#E1E2E2"
-            app:cardBackgroundColor="#E1E2E2"
+            app:cardBackgroundColor="#FAF8F3"
             app:cardElevation="0dp">
 
 
@@ -81,14 +85,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="#5763B5"
+            android:background="#FAF8F3"
             android:backgroundTint="#E0E0E0"
+            app:cardBackgroundColor="#FAF8F3"
             app:cardCornerRadius="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#00D0D0D0"
+                android:background="#FAF8F3"
                 android:orientation="vertical"
                 android:padding="10dp">
 
@@ -120,8 +125,8 @@
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:layout_margin="10dp"
-            android:background="#FFFFFF"
-            app:cardBackgroundColor="#E1E2E2"
+            android:background="#FAF8F3"
+            app:cardBackgroundColor="#FAF8F3"
             app:cardCornerRadius="5dp"
             app:cardElevation="0dp"
             app:cardMaxElevation="0dp">
@@ -144,11 +149,11 @@
                 android:layout_gravity="start"
                 android:layout_weight="1"
                 android:padding="10dp"
-                android:text="My Courses"
+                android:text="Your Courses"
 
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 tools:ignore="RtlCompat" />
         </androidx.cardview.widget.CardView>
@@ -157,7 +162,8 @@
             android:id="@+id/course_recview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#00E1E2E2"
+            android:background="#FAF8F3"
+            android:backgroundTint="#FAF8F3"
             android:orientation="vertical" />
 
     </LinearLayout>
